@@ -1,0 +1,5 @@
+Some experiments with graphics/game engine concepts in Rust.
+
+I hesitate to say "I'm writing a game in Rust" because that's rather huge. So
+to start I'm just writing some of the pieces I'll need if I ever do that. Its
+both playing with some ideas I wanted to try, and learning Rust.
