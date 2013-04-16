@@ -5,21 +5,21 @@ use opengles::gl2;
 use opengles::gl2::{GLuint, GLint, GLenum};
 
 struct Vector2 {
-    x: float,
-    y: float,
+    x: f32,
+    y: f32,
 }
 
 impl Vector2 {
     fn from_str_vec(v: &[~str]) -> Vector2 {
         Vector2::from_vec(do v.map |s| {
-            match float::from_str(*s) {
+            match f32::from_str(*s) {
                 Some(f) => f,
                 None => 0.0,
             }
         })
     }
 
-    fn from_vec(v: &[float]) -> Vector2 {
+    fn from_vec(v: &[f32]) -> Vector2 {
         assert!(v.len() == 2);
         Vector2 {
             x: v[0],
@@ -29,22 +29,22 @@ impl Vector2 {
 }
 
 struct Vector3 {
-    x: float,
-    y: float,
-    z: float,
+    x: f32,
+    y: f32,
+    z: f32,
 }
 
 impl Vector3 {
     fn from_str_vec(v: &[~str]) -> Vector3 {
         Vector3::from_vec(do v.map |s| {
-            match float::from_str(*s) {
+            match f32::from_str(*s) {
                 Some(f) => f,
                 None => 0.0,
             }
         })
     }
 
-    fn from_vec(v: &[float]) -> Vector3 {
+    fn from_vec(v: &[f32]) -> Vector3 {
         assert!(v.len() == 3);
         Vector3 {
             x: v[0],
