@@ -213,6 +213,31 @@ fn main() {
     #[main];
 
     let mesh = load_wavefront("ship.obj");
+    /*
+    let mesh = Mesh {
+        name: ~"square",
+        vertices: ~[
+            Vector3 { x: -1.0, y:  1.0, z: 0.0 },
+            Vector3 { x:  1.0, y:  1.0, z: 0.0 },
+            Vector3 { x:  1.0, y: -1.0, z: 0.0 },
+            Vector3 { x: -1.0, y: -1.0, z: 0.0 },
+        ],
+        texcoords: ~[],
+        normals: ~[],
+        faces: ~[
+            Face { vertices: [
+                Vertex { position: 0, texcoord: 0, normal: 0 },
+                Vertex { position: 1, texcoord: 0, normal: 0 },
+                Vertex { position: 2, texcoord: 0, normal: 0 },
+            ] },
+            Face { vertices: [
+                Vertex { position: 2, texcoord: 0, normal: 0 },
+                Vertex { position: 3, texcoord: 0, normal: 0 },
+                Vertex { position: 0, texcoord: 0, normal: 0 },
+            ] },
+        ],
+    };
+    */
 
     do sdl::start {
         sdl::init([sdl::InitVideo]);
