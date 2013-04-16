@@ -65,7 +65,7 @@ impl Vertex {
         let mut idx = ~[];
         for str::each_split_char(v, '/') |s| {
             idx.push(match u16::from_str(s) {
-                Some(i) => i,
+                Some(i) => i-1,
                 None => 0,
             });
         }
